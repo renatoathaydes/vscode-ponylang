@@ -31,3 +31,22 @@ Highlevel feature list based on
 - [ ] format source code.
 - [ ] format selected lines.
 - [ ] incrementally format code as typing.
+
+## Building
+
+```
+npm install
+npm run compile
+```
+
+## Debugging
+
+In VSCode:
+
+- Open the debug pane (Ctrl+Shift+D)
+- Run the `Launch Client` configuration.
+- Once the debug VSCode instance starts, run also the `Attach to Server` configuration.
+
+This will allow you to debug both the LSP client and server.
+
+Code changes are compiled automatically, but require a debugger restart to take effect.
