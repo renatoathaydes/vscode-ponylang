@@ -4,31 +4,27 @@
     "description": "Pony language extension",
     "version": "0.0.1",
     "publisher": "renatoathaydes",
+    "license": "MIT",
     "engines": {
         "vscode": "^1.19.0"
     },
     "categories": [
         "Languages"
     ],
-    "contributes": {
-        "languages": [{
-            "id": "pony",
-            "aliases": ["Pony", "pony"],
-            "extensions": [".pony"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "pony",
-            "scopeName": "source.pony",
-            "path": "./syntaxes/pony.tmLanguage"
-        }]
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/renatoathaydes/vscode-ponylang"
     },
     "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+        "postinstall": "cd server && npm install && cd ../client && npm install && cd ..",
+        "compile": "tsc -p client/tsconfig.json && cd server && npm run installServer && cd .. && tsc -p server/tsconfig.json",
+        "compile:client": "tsc -p client/tsconfig.json",
+        "watch:client": "tsc -w -p client/tsconfig.json",
+        "compile:server": "cd server && npm run installServer && cd .. && tsc -p server/tsconfig.json",
+        "watch:server": "cd server && npm run installServer && cd .. && tsc -w -p server/tsconfig.json"
+    },
+    "dependencies": {
+        "vscode-languageserver": "^3.4.2"
     },
     "devDependencies": {
         "typescript": "^2.6.1",

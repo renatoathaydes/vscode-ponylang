@@ -11,6 +11,8 @@ Highlevel feature list based on
     
 - [x] syntax highlighting (courtesy of [sublime-pony](https://github.com/ponylang/sublime-pony)).
 - [ ] file icon.
+- [ ] run Main.
+- [ ] run tests.
 - [ ] basic code snippets.
 - [ ] bracket matching.
 - [ ] hover for type information.

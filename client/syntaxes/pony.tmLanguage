@@ -209,6 +209,18 @@
 				</dict>
 				<dict>
 					<key>match</key>
+					<string>\b(None|Bool|ISize|ILong|I8|I16|I32|I64|I128|USize|ULong|U8|U16|U32|U64|U128|F32|F64|String)\b</string>
+					<key>name</key>
+					<string>keyword.other.builtin-type.pony</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(init|final|create|apply|update)\b</string>
+					<key>name</key>
+					<string>keyword.other.sugar.pony</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>\b(iso|trn|ref|val|box|tag)\b</string>
 					<key>name</key>
 					<string>entity.other.attribute-name.pony</string>
@@ -221,7 +233,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(if|ifdef|then|elseif|else|end|match|where|try|with|as|recover|consume|object|digestof)\b</string>
+					<string>\b(if|ifdef|then|elseif|else|end|match|where|try|with|as|recover|consume|object|lambda|digestof)\b</string>
 					<key>name</key>
 					<string>keyword.control.pony</string>
 				</dict>
