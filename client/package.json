@@ -13,7 +13,7 @@
 		"vscode": "^1.16.0"
 	},
 	"categories": [
-		"Other"
+		"Languages"
 	],
 	"activationEvents": [
 		"onLanguage:pony"

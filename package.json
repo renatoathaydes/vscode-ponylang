@@ -2,7 +2,7 @@
     "name": "vscode-ponylang",
     "displayName": "Pony language",
     "description": "Pony language extension",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "renatoathaydes",
     "license": "MIT",
     "engines": {
